@@ -28,8 +28,6 @@ public class Wolf extends Animal{
 
     public boolean isWolfClose(Sheep sheep){
         boolean isClose = false;
-        double[] wolfCords = this.getCords(this);
-        double[] sheepCords = sheep.getCords(sheep);
         if (this.getR(sheep) <= 1){
             isClose = true;
         }
@@ -40,7 +38,6 @@ public class Wolf extends Animal{
         if (this.isWolfClose(sheep)){
             damage = ((this.getH()/this.hf)*this.d)/(Math.pow(this.getR(sheep), 2));
         }
-        sheep.changeHP(damage);
         return damage;
     }
 
