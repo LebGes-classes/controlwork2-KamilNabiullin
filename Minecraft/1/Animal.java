@@ -60,4 +60,5 @@ public abstract class Animal {
         double z = this.getzCord();
         return new double[] {x, y, z};
     }
+
 }

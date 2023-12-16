@@ -48,6 +48,7 @@ public class Wolf extends Animal{
             System.out.println("Волк не убьёт овцу");
             return time;
         }
+        System.out.print("Волк убьёт овцу за ");
         time = sheep.getH()/damage;
 
         return time;
