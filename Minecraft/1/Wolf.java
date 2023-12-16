@@ -44,10 +44,12 @@ public class Wolf extends Animal{
     public double timeToKill(Sheep sheep){
         double time = 0;
         double damage = this.attack(sheep);
-        time = sheep.getH()/damage;
-        if (time == 0){
+        if (damage == 0){
             System.out.println("Волк не убьёт овцу");
+            return time;
         }
+        time = sheep.getH()/damage;
+
         return time;
     }
 }
